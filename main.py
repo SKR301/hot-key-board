@@ -36,6 +36,14 @@ keyDict = {
     '7':0,
     '8':0,
     '9':0,
+    'esc':0,
+    '`':0,
+    'tab':0,
+    'caps lock':0,
+    'shift':0,
+    'ctrl':0,
+    'alt':0,
+    'space':0,
 }
 keyDict[keyboard.read_key()] += 1
 
