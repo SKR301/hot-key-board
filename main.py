@@ -74,39 +74,56 @@ keyDict = {
     'delete':0,
 }
 
+def getBgCol(val):
+    if val == 0:
+        return '#000000'
+    if val < 0.1:
+        return '#26f34d'
+    if val < 0.3:
+        return '#36f326'
+    if val < 0.4:
+        return '#9af326'
+    if val < 0.5:
+        return '#ebf326'
+    if val < 0.7:
+        return '#f3bb26'
+    if val < 0.9:
+        return '#f37326'
+    return '#f32626'
+
 def showHotKeyBoard():
     factor=1.0/sum(keyDict.values())
     for key in keyDict:
         keyDict[key] = keyDict[key]*factor
-        
     
-
-    btnQ = Button(root, text = 'Q', bd = '5')
-    btnW = Button(root, text = 'W', bd = '5')
-    btnE = Button(root, text = 'E', bd = '5')
-    btnR = Button(root, text = 'R', bd = '5')
-    btnT = Button(root, text = 'T', bd = '5')
-    btnY = Button(root, text = 'Y', bd = '5')
-    btnU = Button(root, text = 'U', bd = '5')
-    btnI = Button(root, text = 'I', bd = '5')
-    btnO = Button(root, text = 'O', bd = '5')
-    btnP = Button(root, text = 'P', bd = '5')
-    btnA = Button(root, text = 'A', bd = '5')
-    btnS = Button(root, text = 'S', bd = '5')
-    btnD = Button(root, text = 'D', bd = '5')
-    btnF = Button(root, text = 'F', bd = '5')
-    btnG = Button(root, text = 'G', bd = '5')
-    btnH = Button(root, text = 'H', bd = '5')
-    btnJ = Button(root, text = 'J', bd = '5')
-    btnK = Button(root, text = 'K', bd = '5')
-    btnL = Button(root, text = 'L', bd = '5')
-    btnZ = Button(root, text = 'Z', bd = '5')
-    btnX = Button(root, text = 'X', bd = '5')
-    btnC = Button(root, text = 'C', bd = '5')
-    btnV = Button(root, text = 'V', bd = '5')
-    btnB = Button(root, text = 'B', bd = '5')
-    btnN = Button(root, text = 'N', bd = '5')
-    btnM = Button(root, text = 'M', bd = '5')
+    # print(keyDict)
+        
+    btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['q']))
+    btnW = Button(root, text = 'W', bd = '5', bg = getBgCol(keyDict['w']))
+    btnE = Button(root, text = 'E', bd = '5', bg = getBgCol(keyDict['e']))
+    btnR = Button(root, text = 'R', bd = '5', bg = getBgCol(keyDict['r']))
+    btnT = Button(root, text = 'T', bd = '5', bg = getBgCol(keyDict['t']))
+    btnY = Button(root, text = 'Y', bd = '5', bg = getBgCol(keyDict['y']))
+    btnU = Button(root, text = 'U', bd = '5', bg = getBgCol(keyDict['u']))
+    btnI = Button(root, text = 'I', bd = '5', bg = getBgCol(keyDict['i']))
+    btnO = Button(root, text = 'O', bd = '5', bg = getBgCol(keyDict['o']))
+    btnP = Button(root, text = 'P', bd = '5', bg = getBgCol(keyDict['p']))
+    btnA = Button(root, text = 'A', bd = '5', bg = getBgCol(keyDict['a']))
+    btnS = Button(root, text = 'S', bd = '5', bg = getBgCol(keyDict['s']))
+    btnD = Button(root, text = 'D', bd = '5', bg = getBgCol(keyDict['d']))
+    btnF = Button(root, text = 'F', bd = '5', bg = getBgCol(keyDict['f']))
+    btnG = Button(root, text = 'G', bd = '5', bg = getBgCol(keyDict['g']))
+    btnH = Button(root, text = 'H', bd = '5', bg = getBgCol(keyDict['h']))
+    btnJ = Button(root, text = 'J', bd = '5', bg = getBgCol(keyDict['j']))
+    btnK = Button(root, text = 'K', bd = '5', bg = getBgCol(keyDict['k']))
+    btnL = Button(root, text = 'L', bd = '5', bg = getBgCol(keyDict['l']))
+    btnZ = Button(root, text = 'Z', bd = '5', bg = getBgCol(keyDict['z']))
+    btnX = Button(root, text = 'X', bd = '5', bg = getBgCol(keyDict['x']))
+    btnC = Button(root, text = 'C', bd = '5', bg = getBgCol(keyDict['c']))
+    btnV = Button(root, text = 'V', bd = '5', bg = getBgCol(keyDict['v']))
+    btnB = Button(root, text = 'B', bd = '5', bg = getBgCol(keyDict['b']))
+    btnN = Button(root, text = 'N', bd = '5', bg = getBgCol(keyDict['n']))
+    btnM = Button(root, text = 'M', bd = '5', bg = getBgCol(keyDict['m']))
 
     btnQ.place(x=10, y=10)
     btnW.place(x=60, y=10)
