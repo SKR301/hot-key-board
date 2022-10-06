@@ -1,4 +1,5 @@
 import keyboard
+import atexit
 
 keyDict = {
     'a':0,
@@ -65,9 +66,16 @@ keyDict = {
     'insert':0,
     'delete':0,
 }
-keyDict[keyboard.read_key()] += 1
 
-print(keyDict)
+def exit_handler():
+    print(keyDict)
+
+atexit.register(exit_handler)
+
+while True:
+    keyDict[keyboard.read_key()] += 1
+
+
 
 # from tkinter import *
 
