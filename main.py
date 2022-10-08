@@ -6,6 +6,9 @@ root = Tk()
 root.title("hot-key-board")
 root.geometry("550x220")
 
+buttonGap = 50
+escapeKeys = ['unknown', 'help','f13','f14']
+
 keyDict = {
     'a':0,
     'b':0,
@@ -99,17 +102,16 @@ def showHotKeyBoard():
         
         # print(keyDict)
         
-        
-        btn1 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['0']))
-        btn2 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['1']))
-        btn3 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['2']))
-        btn4 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['3']))
-        btn5 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['4']))
-        btn6 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['5']))
-        btn7 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['6']))
-        btn8 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['7']))
-        btn9 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['8']))
-        btn0 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['9']))
+        btn1 = Button(root, text = '1', bd = '5', bg = getBgCol(keyDict['0']))
+        btn2 = Button(root, text = '2', bd = '5', bg = getBgCol(keyDict['1']))
+        btn3 = Button(root, text = '3', bd = '5', bg = getBgCol(keyDict['2']))
+        btn4 = Button(root, text = '4', bd = '5', bg = getBgCol(keyDict['3']))
+        btn5 = Button(root, text = '5', bd = '5', bg = getBgCol(keyDict['4']))
+        btn6 = Button(root, text = '6', bd = '5', bg = getBgCol(keyDict['5']))
+        btn7 = Button(root, text = '7', bd = '5', bg = getBgCol(keyDict['6']))
+        btn8 = Button(root, text = '8', bd = '5', bg = getBgCol(keyDict['7']))
+        btn9 = Button(root, text = '9', bd = '5', bg = getBgCol(keyDict['8']))
+        btn0 = Button(root, text = '0', bd = '5', bg = getBgCol(keyDict['9']))
         btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['0']))
         btnW = Button(root, text = 'W', bd = '5', bg = getBgCol(keyDict['w']))
         btnE = Button(root, text = 'E', bd = '5', bg = getBgCol(keyDict['e']))
@@ -137,32 +139,42 @@ def showHotKeyBoard():
         btnN = Button(root, text = 'N', bd = '5', bg = getBgCol(keyDict['n']))
         btnM = Button(root, text = 'M', bd = '5', bg = getBgCol(keyDict['m']))
 
-        btnQ.place(x=10, y=10)
-        btnW.place(x=60, y=10)
-        btnE.place(x=110, y=10)
-        btnR.place(x=160, y=10)
-        btnT.place(x=210, y=10)
-        btnY.place(x=260, y=10)
-        btnU.place(x=310, y=10)
-        btnI.place(x=360, y=10)
-        btnO.place(x=410, y=10)
-        btnP.place(x=460, y=10)
-        btnA.place(x=35, y=60)
-        btnS.place(x=95, y=60)
-        btnD.place(x=145, y=60)
-        btnF.place(x=195, y=60)
-        btnG.place(x=245, y=60)
-        btnH.place(x=295, y=60)
-        btnJ.place(x=345, y=60)
-        btnK.place(x=395, y=60)
-        btnL.place(x=445, y=60)
-        btnZ.place(x=60, y=110)
-        btnX.place(x=110, y=110)
-        btnC.place(x=160, y=110)
-        btnV.place(x=210, y=110)
-        btnB.place(x=260, y=110)
-        btnN.place(x=310, y=110)
-        btnM.place(x=360, y=110)
+        btn1.place(x=10, y=10)
+        btn2.place(x=10 + buttonGap, y=10)
+        btn3.place(x=10 + 2*buttonGap, y=10)
+        btn4.place(x=10 + 3*buttonGap, y=10)
+        btn5.place(x=10 + 4*buttonGap, y=10)
+        btn6.place(x=10 + 5*buttonGap, y=10)
+        btn7.place(x=10 + 6*buttonGap, y=10)
+        btn8.place(x=10 + 7*buttonGap, y=10)
+        btn9.place(x=10 + 8*buttonGap, y=10)
+        btn0.place(x=10 + 9*buttonGap, y=10)
+        btnQ.place(x=35, y=10 + buttonGap)
+        btnW.place(x=35 + buttonGap, y=10 + buttonGap)
+        btnE.place(x=35 + 2*buttonGap, y=10 + buttonGap)
+        btnR.place(x=35 + 3*buttonGap, y=10 + buttonGap)
+        btnT.place(x=35 + 4*buttonGap, y=10 + buttonGap)
+        btnY.place(x=35 + 5*buttonGap, y=10 + buttonGap)
+        btnU.place(x=35 + 6*buttonGap, y=10 + buttonGap)
+        btnI.place(x=35 + 7*buttonGap, y=10 + buttonGap)
+        btnO.place(x=35 + 8*buttonGap, y=10 + buttonGap)
+        btnP.place(x=35 + 9*buttonGap, y=10 + buttonGap)
+        btnA.place(x=60, y=10 + 2*buttonGap)
+        btnS.place(x=60 + buttonGap, y=10 + 2*buttonGap)
+        btnD.place(x=60 + 2*buttonGap, y=10 + 2*buttonGap)
+        btnF.place(x=60 + 3*buttonGap, y=10 + 2*buttonGap)
+        btnG.place(x=60 + 4*buttonGap, y=10 + 2*buttonGap)
+        btnH.place(x=60 + 5*buttonGap, y=10 + 2*buttonGap)
+        btnJ.place(x=60 + 6*buttonGap, y=10 + 2*buttonGap)
+        btnK.place(x=60 + 7*buttonGap, y=10 + 2*buttonGap)
+        btnL.place(x=60 + 8*buttonGap, y=10 + 2*buttonGap)
+        btnZ.place(x=85, y=10 + 3*buttonGap)
+        btnX.place(x=85 + buttonGap, y=10 + 3*buttonGap)
+        btnC.place(x=85 + 2*buttonGap, y=10 + 3*buttonGap)
+        btnV.place(x=85 + 3*buttonGap, y=10 + 3*buttonGap)
+        btnB.place(x=85 + 4*buttonGap, y=10 + 3*buttonGap)
+        btnN.place(x=85 + 5*buttonGap, y=10 + 3*buttonGap)
+        btnM.place(x=85 + 6*buttonGap, y=10 + 3*buttonGap)
 
         mainloop()
     except:
@@ -173,8 +185,9 @@ atexit.register(showHotKeyBoard)
 while True:
     try:
         key = keyboard.read_key()
-        if key != 'unknown':
+        if key not in escapeKeys:
             keyDict[keyboard.read_key()] += 1
-    except:
+    except Exception as e:
+        print(e)
         showHotKeyBoard()
         break
