@@ -98,8 +98,19 @@ def showHotKeyBoard():
             keyDict[key] = keyDict[key]*factor
         
         # print(keyDict)
-            
-        btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['q']))
+        
+        
+        btn1 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['0']))
+        btn2 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['1']))
+        btn3 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['2']))
+        btn4 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['3']))
+        btn5 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['4']))
+        btn6 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['5']))
+        btn7 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['6']))
+        btn8 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['7']))
+        btn9 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['8']))
+        btn0 = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['9']))
+        btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['0']))
         btnW = Button(root, text = 'W', bd = '5', bg = getBgCol(keyDict['w']))
         btnE = Button(root, text = 'E', bd = '5', bg = getBgCol(keyDict['e']))
         btnR = Button(root, text = 'R', bd = '5', bg = getBgCol(keyDict['r']))
