@@ -4,7 +4,7 @@ from tkinter import *
 
 root = Tk()
 root.title("hot-key-board")
-root.geometry("550x220")
+root.geometry("750x220")
 
 buttonGap = 50
 escapeKeys = ['unknown', 'help','f13','f14']
@@ -211,6 +211,6 @@ while True:
         if key not in escapeKeys:
             keyDict[keyboard.read_key()] += 1
     except Exception as e:
-        print(e)
+        # print(e)
         showHotKeyBoard()
         break
