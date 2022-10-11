@@ -9,6 +9,7 @@ root.geometry("750x220")
 buttonGap = 50
 escapeKeys = ['unknown', 'help','f13','f14']
 
+# key dictionary
 keyDict = {
     'a':0,
     'b':0,
@@ -77,6 +78,7 @@ keyDict = {
     'unknown':0,
 }
 
+# returns colors based on normalized value 
 def getBgCol(val):
     if val == 0:
         return '#555555'
@@ -94,6 +96,7 @@ def getBgCol(val):
         return '#f37326'
     return '#f32626'
 
+# vizualize at end
 def showHotKeyBoard():
     try:
         factor=1.0/sum(keyDict.values())
@@ -102,6 +105,7 @@ def showHotKeyBoard():
         
         # print(keyDict)
         
+        # buttons initialize
         btn1 = Button(root, text = '1', bd = '5', bg = getBgCol(keyDict['1']))
         btn2 = Button(root, text = '2', bd = '5', bg = getBgCol(keyDict['2']))
         btn3 = Button(root, text = '3', bd = '5', bg = getBgCol(keyDict['3']))
@@ -149,6 +153,7 @@ def showHotKeyBoard():
         btnDot = Button(root, text = '.', bd = '5', bg = getBgCol(keyDict['.']))
         btnSlash = Button(root, text = '/', bd = '5', bg = getBgCol(keyDict['/']))
 
+        # button positioning
         btn1.place(x=10, y=10)
         btn2.place(x=10 + buttonGap, y=10)
         btn3.place(x=10 + 2*buttonGap, y=10)
@@ -202,7 +207,8 @@ def showHotKeyBoard():
         mainloop()
     except:
         pass
-    
+
+# run at exit 
 atexit.register(showHotKeyBoard)
 
 while True:
