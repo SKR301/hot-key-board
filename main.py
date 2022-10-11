@@ -79,7 +79,7 @@ keyDict = {
 
 def getBgCol(val):
     if val == 0:
-        return '#000000'
+        return '#555555'
     if val < 0.1:
         return '#26f34d'
     if val < 0.3:
@@ -102,17 +102,17 @@ def showHotKeyBoard():
         
         # print(keyDict)
         
-        btn1 = Button(root, text = '1', bd = '5', bg = getBgCol(keyDict['0']))
-        btn2 = Button(root, text = '2', bd = '5', bg = getBgCol(keyDict['1']))
-        btn3 = Button(root, text = '3', bd = '5', bg = getBgCol(keyDict['2']))
-        btn4 = Button(root, text = '4', bd = '5', bg = getBgCol(keyDict['3']))
-        btn5 = Button(root, text = '5', bd = '5', bg = getBgCol(keyDict['4']))
-        btn6 = Button(root, text = '6', bd = '5', bg = getBgCol(keyDict['5']))
-        btn7 = Button(root, text = '7', bd = '5', bg = getBgCol(keyDict['6']))
-        btn8 = Button(root, text = '8', bd = '5', bg = getBgCol(keyDict['7']))
-        btn9 = Button(root, text = '9', bd = '5', bg = getBgCol(keyDict['8']))
-        btn0 = Button(root, text = '0', bd = '5', bg = getBgCol(keyDict['9']))
-        btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['0']))
+        btn1 = Button(root, text = '1', bd = '5', bg = getBgCol(keyDict['1']))
+        btn2 = Button(root, text = '2', bd = '5', bg = getBgCol(keyDict['2']))
+        btn3 = Button(root, text = '3', bd = '5', bg = getBgCol(keyDict['3']))
+        btn4 = Button(root, text = '4', bd = '5', bg = getBgCol(keyDict['4']))
+        btn5 = Button(root, text = '5', bd = '5', bg = getBgCol(keyDict['5']))
+        btn6 = Button(root, text = '6', bd = '5', bg = getBgCol(keyDict['6']))
+        btn7 = Button(root, text = '7', bd = '5', bg = getBgCol(keyDict['7']))
+        btn8 = Button(root, text = '8', bd = '5', bg = getBgCol(keyDict['8']))
+        btn9 = Button(root, text = '9', bd = '5', bg = getBgCol(keyDict['9']))
+        btn0 = Button(root, text = '0', bd = '5', bg = getBgCol(keyDict['0']))
+        btnQ = Button(root, text = 'Q', bd = '5', bg = getBgCol(keyDict['q']))
         btnW = Button(root, text = 'W', bd = '5', bg = getBgCol(keyDict['w']))
         btnE = Button(root, text = 'E', bd = '5', bg = getBgCol(keyDict['e']))
         btnR = Button(root, text = 'R', bd = '5', bg = getBgCol(keyDict['r']))
@@ -138,6 +138,16 @@ def showHotKeyBoard():
         btnB = Button(root, text = 'B', bd = '5', bg = getBgCol(keyDict['b']))
         btnN = Button(root, text = 'N', bd = '5', bg = getBgCol(keyDict['n']))
         btnM = Button(root, text = 'M', bd = '5', bg = getBgCol(keyDict['m']))
+        btnMinus = Button(root, text = '-', bd = '5', bg = getBgCol(keyDict['-']))
+        btnEquals = Button(root, text = '=', bd = '5', bg = getBgCol(keyDict['=']))
+        btnSqBracetOpen = Button(root, text = '[', bd = '5', bg = getBgCol(keyDict['[']))
+        btnSqBracetClose = Button(root, text = ']', bd = '5', bg = getBgCol(keyDict[']']))
+        btnBackSlash = Button(root, text = '\\', bd = '5', bg = getBgCol(keyDict['\\']))
+        btnSemiColon = Button(root, text = ';', bd = '5', bg = getBgCol(keyDict[';']))
+        btnQuote = Button(root, text = '\'', bd = '5', bg = getBgCol(keyDict['\'']))
+        btnComma = Button(root, text = ',', bd = '5', bg = getBgCol(keyDict[',']))
+        btnDot = Button(root, text = '.', bd = '5', bg = getBgCol(keyDict['.']))
+        btnSlash = Button(root, text = '/', bd = '5', bg = getBgCol(keyDict['/']))
 
         btn1.place(x=10, y=10)
         btn2.place(x=10 + buttonGap, y=10)
@@ -149,6 +159,9 @@ def showHotKeyBoard():
         btn8.place(x=10 + 7*buttonGap, y=10)
         btn9.place(x=10 + 8*buttonGap, y=10)
         btn0.place(x=10 + 9*buttonGap, y=10)
+        btnMinus.place(x=10 + 10*buttonGap, y=10)
+        btnEquals.place(x=10 + 11*buttonGap, y=10)
+
         btnQ.place(x=35, y=10 + buttonGap)
         btnW.place(x=35 + buttonGap, y=10 + buttonGap)
         btnE.place(x=35 + 2*buttonGap, y=10 + buttonGap)
@@ -159,6 +172,10 @@ def showHotKeyBoard():
         btnI.place(x=35 + 7*buttonGap, y=10 + buttonGap)
         btnO.place(x=35 + 8*buttonGap, y=10 + buttonGap)
         btnP.place(x=35 + 9*buttonGap, y=10 + buttonGap)
+        btnSqBracetOpen.place(x=35 + 10*buttonGap, y=10 + buttonGap)
+        btnSqBracetClose.place(x=35 + 11*buttonGap, y=10 + buttonGap)
+        btnBackSlash.place(x=35 + 12*buttonGap, y=10 + buttonGap)
+
         btnA.place(x=60, y=10 + 2*buttonGap)
         btnS.place(x=60 + buttonGap, y=10 + 2*buttonGap)
         btnD.place(x=60 + 2*buttonGap, y=10 + 2*buttonGap)
@@ -168,6 +185,9 @@ def showHotKeyBoard():
         btnJ.place(x=60 + 6*buttonGap, y=10 + 2*buttonGap)
         btnK.place(x=60 + 7*buttonGap, y=10 + 2*buttonGap)
         btnL.place(x=60 + 8*buttonGap, y=10 + 2*buttonGap)
+        btnSemiColon.place(x=60 + 9*buttonGap, y=10 + 2*buttonGap)
+        btnQuote.place(x=60 + 10*buttonGap, y=10 + 2*buttonGap)
+
         btnZ.place(x=85, y=10 + 3*buttonGap)
         btnX.place(x=85 + buttonGap, y=10 + 3*buttonGap)
         btnC.place(x=85 + 2*buttonGap, y=10 + 3*buttonGap)
@@ -175,6 +195,9 @@ def showHotKeyBoard():
         btnB.place(x=85 + 4*buttonGap, y=10 + 3*buttonGap)
         btnN.place(x=85 + 5*buttonGap, y=10 + 3*buttonGap)
         btnM.place(x=85 + 6*buttonGap, y=10 + 3*buttonGap)
+        btnComma.place(x=85 + 7*buttonGap, y=10 + 3*buttonGap)
+        btnDot.place(x=85 + 8*buttonGap, y=10 + 3*buttonGap)
+        btnSlash.place(x=85 + 9*buttonGap, y=10 + 3*buttonGap)
 
         mainloop()
     except:
