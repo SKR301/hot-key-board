@@ -249,7 +249,7 @@ def showHotKeyBoard():
 
         mainloop()
     except Exception as e:
-        print(2,e)
+        print('Debug error: [001]',e)
 
 # run at exit 
 atexit.register(showHotKeyBoard)
@@ -260,6 +260,6 @@ while True:
         if key not in escapeKeys:
             keyDict[keyboard.read_key()] += 1
     except Exception as e:
-        print(1,e)
+        print('Debug error: [000]',e)
         showHotKeyBoard()
         break
