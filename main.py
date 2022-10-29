@@ -114,8 +114,6 @@ def showHotKeyBoard():
         for key in keyDict:
             keyDict[key] = keyDict[key]*factor
         
-        # print(keyDict)
-        
         # buttons initialize
         btnGrave = Button(root, text = '`', bd = '5', fg = getFgCol(keyDict['`']), bg = getBgCol(keyDict['`']))
         btn1 = Button(root, text = '1', bd = '5', fg = getFgCol(keyDict['1']), bg = getBgCol(keyDict['1']))
