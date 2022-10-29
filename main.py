@@ -105,7 +105,12 @@ def getFgCol(val):
 # vizualize at end
 def showHotKeyBoard():
     try:
-        factor=1.0/sum(keyDict.values())
+        total = sum(keyDict.values())
+
+        if total == 0:
+            total = 1
+
+        factor=1.0/total
         for key in keyDict:
             keyDict[key] = keyDict[key]*factor
         
@@ -176,8 +181,8 @@ def showHotKeyBoard():
 
         # button positioning       
         btnEsc.place(x=10, y=10)       
-        btnInsert.place(x=10 + buttonGap, y=10)       
-        btnDelete.place(x=10 + 2*buttonGap, y=10)     
+        btnInsert.place(x=10 + 1.25*buttonGap, y=10)       
+        btnDelete.place(x=10 + 2.8*buttonGap, y=10)     
 
         btnGrave.place(x=10, y=10 + buttonGap)
         btn1.place(x=10 + buttonGap, y=10 + buttonGap)
@@ -194,7 +199,7 @@ def showHotKeyBoard():
         btnEquals.place(x=10 + 12*buttonGap, y=10 + buttonGap)        
         btnBackspace.place(x=10 + 13*buttonGap, y=10 + buttonGap)
 
-        btnTab.place(x=10, y=10 + buttonGap)
+        btnTab.place(x=10, y=10 + 2*buttonGap)
         btnQ.place(x=35 + buttonGap, y=10 + 2*buttonGap)
         btnW.place(x=35 + 2*buttonGap, y=10 + 2*buttonGap)
         btnE.place(x=35 + 3*buttonGap, y=10 + 2*buttonGap)
@@ -237,10 +242,10 @@ def showHotKeyBoard():
         btnRShift.place(x=85 + 10*buttonGap, y=10 + 4*buttonGap)
 
         btnLCtrl.place(x=10, y=10 + 5*buttonGap)
-        btnLAlt.place(x=10 + 2*buttonGap, y=10 + 5*buttonGap)
-        btnSpace.place(x=10 + 4*buttonGap, y=10 + 5*buttonGap)
+        btnLAlt.place(x=10 + buttonGap, y=10 + 5*buttonGap)
+        btnSpace.place(x=10 + 2*buttonGap, y=10 + 5*buttonGap)
         btnRAlt.place(x=10 + 3*buttonGap, y=10 + 5*buttonGap)
-        btnRCtrl.place(x=10 + buttonGap, y=10 + 5*buttonGap)
+        btnRCtrl.place(x=10 + 4*buttonGap, y=10 + 5*buttonGap)
 
         mainloop()
     except Exception as e:
