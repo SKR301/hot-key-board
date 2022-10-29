@@ -112,7 +112,7 @@ def showHotKeyBoard():
         # print(keyDict)
         
         # buttons initialize
-        btnTidle = Button(root, text = '~', bd = '5', fg = getFgCol(keyDict['~']), bg = getBgCol(keyDict['~']))
+        btnGrave = Button(root, text = '`', bd = '5', fg = getFgCol(keyDict['`']), bg = getBgCol(keyDict['`']))
         btn1 = Button(root, text = '1', bd = '5', fg = getFgCol(keyDict['1']), bg = getBgCol(keyDict['1']))
         btn2 = Button(root, text = '2', bd = '5', fg = getFgCol(keyDict['2']), bg = getBgCol(keyDict['2']))
         btn3 = Button(root, text = '3', bd = '5', fg = getFgCol(keyDict['3']), bg = getBgCol(keyDict['3']))
@@ -179,7 +179,7 @@ def showHotKeyBoard():
         btnInsert.place(x=10 + buttonGap, y=10)       
         btnDelete.place(x=10 + 2*buttonGap, y=10)     
 
-        btnTidle.place(x=10, y=10 + buttonGap)
+        btnGrave.place(x=10, y=10 + buttonGap)
         btn1.place(x=10 + buttonGap, y=10 + buttonGap)
         btn2.place(x=10 + 2*buttonGap, y=10 + buttonGap)
         btn3.place(x=10 + 3*buttonGap, y=10 + buttonGap)
@@ -243,8 +243,8 @@ def showHotKeyBoard():
         btnRCtrl.place(x=10 + buttonGap, y=10 + 5*buttonGap)
 
         mainloop()
-    except:
-        pass
+    except Exception as e:
+        print(2,e)
 
 # run at exit 
 atexit.register(showHotKeyBoard)
@@ -255,6 +255,6 @@ while True:
         if key not in escapeKeys:
             keyDict[keyboard.read_key()] += 1
     except Exception as e:
-        # print(e)
+        print(1,e)
         showHotKeyBoard()
         break
