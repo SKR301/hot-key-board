@@ -197,7 +197,7 @@ def showHotKeyBoard():
         btn0.place(x=10 + 10*buttonGap, y=10 + buttonGap)
         btnMinus.place(x=10 + 11*buttonGap, y=10 + buttonGap)
         btnEquals.place(x=10 + 12*buttonGap, y=10 + buttonGap)        
-        btnBackspace.place(x=10 + 13*buttonGap, y=10 + buttonGap)
+        btnBackspace.place(x=10 + 13.1*buttonGap, y=10 + buttonGap)
 
         btnTab.place(x=10, y=10 + 2*buttonGap)
         btnQ.place(x=35 + buttonGap, y=10 + 2*buttonGap)
