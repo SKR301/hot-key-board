@@ -1,6 +1,7 @@
 import keyboard
 import atexit
 from tkinter import *
+import sys
 
 root = Tk()
 root.title("hot-key-board")
@@ -257,6 +258,8 @@ while True:
         key = keyboard.read_key()
         if key not in escapeKeys:
             keyDict[keyboard.read_key()] += 1
+    except KeyboardInterrupt:
+        sys.exit()
     except Exception as e:
         print('Debug error: [000]',e)
         showHotKeyBoard()
